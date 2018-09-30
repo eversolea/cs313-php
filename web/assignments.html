@@ -1,0 +1,41 @@
+<html>
+<head>
+<title> Welcome! - Introduction </title>
+<link rel="stylesheet" href="home.css">
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+//source: https://www.w3schools.com/js/tryit.asp?filename=tryjs_timing_clock
+</script>
+</head>
+
+<body onload="startTime()" bgcolor="#dcdce2">
+
+
+<div class="header">
+  <center><h2><div id="txt"></div></h2></center>
+  <h1> Welcome to the webpage of: Austin Eversole! </h1>
+</div>
+
+<ul>
+  <li><a  href="home.html">Home</a></li>
+  <li><a class="active" href="assignments.html">Assignments</a></li>
+</ul>
+<br /><br /><br />
+This content will be releasing to your local Walmart soon...
+
+</body>
+</html>
