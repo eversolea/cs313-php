@@ -1,8 +1,9 @@
-/* <?php
+<?php
 //Start the session
 session_start();
+$_SESSION["cart"] = ""
 ?>
- */
+
 <html>
 <head>
 <title> Halo Merchandise: Shopping Cart </title>
@@ -38,16 +39,18 @@ session_start();
   </style>
 </head>
 <body>
+<?php
+if(isset($_GET["Item1"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item1";
+    echo $_SESSION["cart"]
+}
+?>  
 
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Halo Merchandise: Browse Items</h1>
-<?php
-if(isset($_GET["Item1"]))
-{
-    echo "BLAH BLAH BLAH BLAH BLAH BLAH";
-}
-?>    
+ 
     <p>All your favorite Halo items - for cheap!</p>
   </div>
 </div>
