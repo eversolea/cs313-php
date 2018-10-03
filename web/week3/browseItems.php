@@ -107,15 +107,14 @@ if(isset($_GET["Item6"]))
         <div class="panel-body"><img src=" energySword.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
-        <input type="submit" name="Item1" class="btn btn-danger" value="Add to Cart"/>
+        <input type="submit" name="Item1" class="btn btn-danger" value="Add to Cart"/>       
+        </form>
         <?php
-        if(strpos($_SESSION["cart"], 'Item1') !== false)
+        if(strpos($_SESSION["cart"], 'item1') !== false)
         {
             echo "<div class='alert alert-success'>Item Bought!</div>";
         }
         ?>
-        
-        </form>
         </div>
       </div>
     </div>
