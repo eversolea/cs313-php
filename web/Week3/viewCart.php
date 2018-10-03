@@ -119,7 +119,7 @@ if(isset($_GET["Item6"]))
         </div>
         <div class="panel-footer">
         <?php
-        echo $_SESSION["cart"];
+        echo "here" . $_SESSION["cart"] . "cart";
         ?>
         </div>
     </div>
