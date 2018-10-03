@@ -1,7 +1,7 @@
 <?php
 //Start the session
 session_start();
-$_SESSION["cart"] = "";
+$_SESSION["cart"];
 ?>
 
 <html>
@@ -43,11 +43,26 @@ $_SESSION["cart"] = "";
 if(isset($_GET["Item1"]))
 {
     $_SESSION["cart"] = $_SESSION["cart"] . "item1";
-    if(Session["cart"] != null)
-    {
-        echo $_SESSION["cart"];
-        echo "It works!";
-    }
+}
+if(isset($_GET["Item2"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item2";
+}
+if(isset($_GET["Item3"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item3";
+}
+if(isset($_GET["Item4"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item4";
+}
+if(isset($_GET["Item5"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item5";
+}
+if(isset($_GET["Item6"]))
+{
+    $_SESSION["cart"] = $_SESSION["cart"] . "item6";
 }
 ?>  
 
@@ -89,7 +104,7 @@ if(isset($_GET["Item1"]))
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Energy Sword</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\energySword.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src=" energySword.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item1" class="btn btn-danger" value="Add to Cart"/>
@@ -100,15 +115,21 @@ if(isset($_GET["Item1"]))
     <div class="col-sm-4"> 
       <div class="panel panel-danger">
         <div class="panel-heading">Spartan Helmet</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\helmet.png" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$5 <button type="button" class="btn btn-danger">Add to Cart</button></div>
+        <div class="panel-body"><img src=" helmet.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">$5 
+        <form action="browseItems.php" method="get">
+        <input type="submit" name="Item2" class="btn btn-danger" value="Add to Cart"/>
+        </form></div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
         <div class="panel-heading">Plasma Pistol</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$3 <button type="button" class="btn btn-danger">Add to Cart</button></div>
+        <div class="panel-body"><img src=" plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">$3 
+        <form action="browseItems.php" method="get">
+        <input type="submit" name="Item3" class="btn btn-danger" value="Add to Cart"/>
+        </form></div>
       </div>
     </div>
   </div>
@@ -119,23 +140,35 @@ if(isset($_GET["Item1"]))
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Plasma Rifle</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$3 <button type="button" class="btn btn-danger">Add to Cart</button></div>
+        <div class="panel-body"><img src=" plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">$3 
+        <form action="browseItems.php" method="get">
+        <input type="submit" name="Item4" class="btn btn-danger" value="Add to Cart"/>
+        </form>
+        
+        </div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Cortana AI Chip</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\Cortana.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$4.50 <button type="button" class="btn btn-danger">Add to Cart</button></div>
+        <div class="panel-body"><img src=" Cortana.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">$4.50 
+                <form action="browseItems.php" method="get">
+        <input type="submit" name="Item5" class="btn btn-danger" value="Add to Cart"/>
+        </form>
+        </div>
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Master Chief and Cortana</div>
-        <div class="panel-body"><img src="C:\Users\austi\Documents\School\Fall 2018\Web Engineering II\cs313-php\web\Week3\masterChiefCortana.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src=" masterChiefCortana.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
         
-        <div class="panel-footer">$3 <button type="button" class="btn btn-danger">Add to Cart</button></div>
+        <div class="panel-footer">$3 
+        <form action="browseItems.php" method="get">
+        <input type="submit" name="Item6" class="btn btn-danger" value="Add to Cart"/>
+        </form></div>
       </div>
     </div>
   </div>
