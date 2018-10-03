@@ -125,7 +125,14 @@ if(isset($_GET["Item6"]))
         <div class="panel-footer">$5 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item2" class="btn btn-danger" value="Add to Cart"/>
-        </form></div>
+        </form>
+        <?php
+        if(strpos($_SESSION["cart"], 'item2') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?>
+        </div>
       </div>
     </div>
     <div class="col-sm-4"> 
@@ -135,7 +142,14 @@ if(isset($_GET["Item6"]))
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item3" class="btn btn-danger" value="Add to Cart"/>
-        </form></div>
+        </form>
+        <?php
+        if(strpos($_SESSION["cart"], 'item3') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?>
+        </div>
       </div>
     </div>
   </div>
@@ -151,7 +165,12 @@ if(isset($_GET["Item6"]))
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item4" class="btn btn-danger" value="Add to Cart"/>
         </form>
-        
+        <?php
+        if(strpos($_SESSION["cart"], 'item4') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?>
         </div>
       </div>
     </div>
@@ -163,6 +182,12 @@ if(isset($_GET["Item6"]))
                 <form action="browseItems.php" method="get">
         <input type="submit" name="Item5" class="btn btn-danger" value="Add to Cart"/>
         </form>
+        <?php
+        if(strpos($_SESSION["cart"], 'item5') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?>
         </div>
       </div>
     </div>
@@ -174,7 +199,13 @@ if(isset($_GET["Item6"]))
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item6" class="btn btn-danger" value="Add to Cart"/>
-        </form></div>
+        </form>
+        <?php
+        if(strpos($_SESSION["cart"], 'item6') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?></div>
       </div>
     </div>
   </div>
