@@ -43,7 +43,11 @@ $_SESSION["cart"] = "";
 if(isset($_GET["Item1"]))
 {
     $_SESSION["cart"] = $_SESSION["cart"] . "item1";
-    echo $_SESSION["cart"];
+    if(Session["cart"] != null)
+    {
+        echo $_SESSION["cart"];
+        echo "It works!";
+    }
 }
 ?>  
 
