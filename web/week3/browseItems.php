@@ -108,6 +108,13 @@ if(isset($_GET["Item6"]))
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item1" class="btn btn-danger" value="Add to Cart"/>
+        <?php
+        if(strpos($_SESSION["cart"], 'Item1') !== false)
+        {
+            echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+        ?>
+        
         </form>
         </div>
       </div>
