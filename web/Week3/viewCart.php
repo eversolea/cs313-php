@@ -76,8 +76,8 @@ if(isset($_GET["Item6"]))
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Browse Items</a></li>
-        <li><a href="#">View Cart</a></li>
+        <li class="active"><a href="browseItems.php">Browse Items</a></li>
+        <li><a href="viewCart.php">View Cart</a></li>
         <li><a href="#">Checkout</a></li>
         <li><a href="#">Confirmation page</a></li>
       </ul>
