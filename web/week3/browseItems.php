@@ -1,7 +1,7 @@
 <?php
 //Start the session
 session_start();
-$_SESSION["cart"] = ""
+$_SESSION["cart"] = "";
 ?>
 
 <html>
@@ -43,7 +43,7 @@ $_SESSION["cart"] = ""
 if(isset($_GET["Item1"]))
 {
     $_SESSION["cart"] = $_SESSION["cart"] . "item1";
-    echo $_SESSION["cart"]
+    echo $_SESSION["cart"];
 }
 ?>  
 
