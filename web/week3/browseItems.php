@@ -1,8 +1,8 @@
-<?php
+/* <?php
 //Start the session
 session_start();
 ?>
-
+ */
 <html>
 <head>
 <title> Halo Merchandise: Shopping Cart </title>
@@ -45,7 +45,7 @@ session_start();
 <?php
 if(isset($_GET["Item1"]))
 {
-    echo "BLAH BLAH BLAH BLAH BLAH BLAH"
+    echo "BLAH BLAH BLAH BLAH BLAH BLAH";
 }
 ?>    
     <p>All your favorite Halo items - for cheap!</p>
