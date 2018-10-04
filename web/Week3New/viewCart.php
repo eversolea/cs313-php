@@ -92,29 +92,29 @@ session_start();
                     $_SESSION["cart"] = preg_replace('/item1/', '', $_SESSION["cart"], 1);
                     echo "Energy Sword: $3<br />";
                 }
-                if(strpos($_SESSION["cart"], 'item2') !== false)
+                else if(strpos($_SESSION["cart"], 'item2') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item2","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item2/', '', $_SESSION["cart"], 1);
                     echo "Spartan Helmet: $3<br />";
                 }
-                if(strpos($_SESSION["cart"], 'item3') !== false)
+                else if(strpos($_SESSION["cart"], 'item3') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item3","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item3/', '', $_SESSION["cart"], 1);
                     echo "Plamsa Pistol: $3<br />";
                 }
-                if(strpos($_SESSION["cart"], 'item4') !== false)
+                else if(strpos($_SESSION["cart"], 'item4') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item4","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item4/', '', $_SESSION["cart"], 1);
                     echo "Plasma Rifle: $3<br />";
                 }
-                if(strpos($_SESSION["cart"], 'item5') !== false)
+                else if(strpos($_SESSION["cart"], 'item5') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item5","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item5/', '', $_SESSION["cart"], 1);
                     echo "Cortana AI Chip: $3<br />";
                 }
-                if(strpos($_SESSION["cart"], 'item6') !== false)
+                else if(strpos($_SESSION["cart"], 'item6') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item6","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item6/', '', $_SESSION["cart"], 1);
                     echo "Master Chief and Cortana: $3<br />";
                 }
             }
