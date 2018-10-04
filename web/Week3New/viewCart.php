@@ -35,32 +35,6 @@ session_start();
   </style>
 </head>
 <body>
-<?php
-if(isset($_GET["Item1"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item1";
-}
-if(isset($_GET["Item2"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item2";
-}
-if(isset($_GET["Item3"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item3";
-}
-if(isset($_GET["Item4"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item4";
-}
-if(isset($_GET["Item5"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item5";
-}
-if(isset($_GET["Item6"]))
-{
-    $_SESSION["cart"] = $_SESSION["cart"] . "item6";
-}
-?>  
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -109,15 +83,7 @@ if(isset($_GET["Item6"]))
         else
         {
             echo "<h4>";
-            while($_SESSION["cart"] != "")
-            {
-                if(strpos($_SESSION["cart"], 'item1') !== false)
-                {
-                    $_SESSION["cart"] = str_replace("item1","",$_SESSION["cart"]);
-                    echo "Energy Sword: $3<br />";
-                }
-            
-            }
+    
         }
         echo "</h4>";
         
