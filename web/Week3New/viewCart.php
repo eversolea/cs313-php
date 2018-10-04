@@ -89,7 +89,7 @@ session_start();
             {
                 if(strpos($_SESSION["cart"], 'item1') !== false)
                 {
-                    $_SESSION["cart"] = str_replace("item1","",$_SESSION["cart"]);
+                    $_SESSION["cart"] = preg_replace('/item1/', '', $_SESSION["cart"], 1);
                     echo "Energy Sword: $3<br />";
                 }
                 if(strpos($_SESSION["cart"], 'item2') !== false)
