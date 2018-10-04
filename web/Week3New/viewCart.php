@@ -56,8 +56,8 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="browseItems.php">Browse Items</a></li>
-        <li><a href="viewCart.php">View Cart</a></li>
+        <li><a href="browseItems.php">Browse Items</a></li>
+        <li class="active"><a href="viewCart.php">View Cart</a></li>
         <li><a href="checkout.php">Checkout</a></li>
         <li><a href="confirmation.php">Confirmation page</a></li>
       </ul>
@@ -84,7 +84,7 @@ session_start();
         }
         else
         {
-            echo "<h4>";
+            echo "<h3>";
             while($_SESSION["cart"] != "")
             {
                 if(strpos($_SESSION["cart"], 'item1') !== false)
@@ -119,14 +119,14 @@ session_start();
                 }
             }
         }
-        echo "</h4>";
+        echo "</h3>";
         
         $_SESSION["cart"] = $CartBackup;
         
         ?>
         </div>
         <div class="panel-footer">
-        
+        <a class="btn btn-default" href="checkout.php">Check Out</a>
         </div>
     </div>
     

@@ -56,10 +56,10 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="browseItems.php">Browse Items</a></li>
+        <li><a href="browseItems.php">Browse Items</a></li>
         <li><a href="viewCart.php">View Cart</a></li>
         <li><a href="checkout.php">Checkout</a></li>
-        <li><a href="confirmation.php">Confirmation page</a></li>
+        <li class="active"><a href="confirmation.php">Confirmation page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
@@ -76,6 +76,58 @@ session_start();
         <div class="panel-body">
         Order Confirmed! Master Chief says Thank you for your Business :)
         <br />
+        <h3> Your Items: </h3><br /><br />
+        <?php
+        $CartBackup = $_SESSION["cart"];
+        
+        if($_SESSION["cart"] == "")
+        {
+            echo "You don't have any items in your cart yet!";
+        }
+        else
+        {
+            echo "<h3>";
+            while($_SESSION["cart"] != "")
+            {
+                if(strpos($_SESSION["cart"], 'item1') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item1/', '', $_SESSION["cart"], 1);
+                    echo "Energy Sword: $3<br />";
+                }
+                else if(strpos($_SESSION["cart"], 'item2') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item2/', '', $_SESSION["cart"], 1);
+                    echo "Spartan Helmet: $5<br />";
+                }
+                else if(strpos($_SESSION["cart"], 'item3') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item3/', '', $_SESSION["cart"], 1);
+                    echo "Plamsa Pistol: $3<br />";
+                }
+                else if(strpos($_SESSION["cart"], 'item4') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item4/', '', $_SESSION["cart"], 1);
+                    echo "Plasma Rifle: $3<br />";
+                }
+                else if(strpos($_SESSION["cart"], 'item5') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item5/', '', $_SESSION["cart"], 1);
+                    echo "Cortana AI Chip: $4.50<br />";
+                }
+                else if(strpos($_SESSION["cart"], 'item6') !== false)
+                {
+                    $_SESSION["cart"] = preg_replace('/item6/', '', $_SESSION["cart"], 1);
+                    echo "Master Chief and Cortana: $3<br />";
+                }
+            }
+        }
+        echo "</h3>";
+        
+        $_SESSION["cart"] = $CartBackup;
+        ?>
+        <br />
+        Your shipping information:
+        <br />
         <?php
         if(isset($_POST["address1"]))
         {
@@ -85,6 +137,7 @@ session_start();
         {
             echo "Street Address not provided";
         }
+        echo "<br />";
         if(isset($_POST["address2"]))
         {
             echo "Address Line 2:" . $_POST["address2"];
@@ -93,6 +146,7 @@ session_start();
         {
             echo "Address Line 2 not provided";
         }
+        echo "<br />";
         if(isset($_POST["city"]))
         {
             echo "City:" . $_POST["city"];
@@ -101,6 +155,7 @@ session_start();
         {
             echo "City not provided";
         }
+        echo "<br />";
         if(isset($_POST["zip"]))
         {
             echo "Postal / Zip Code:" . $_POST["zip"];
@@ -109,6 +164,7 @@ session_start();
         {
             echo "Postal / Zip Code not provided";
         }
+        echo "<br />";
         if(isset($_POST["state"]))
         {
             echo "State / Province / Region:" . $_POST["state"];
@@ -117,6 +173,7 @@ session_start();
         {
             echo "State / Province / Region not provided";
         }
+        echo "<br />";
         if(isset($_POST["country"]))
         {
              echo "Country" . $_POST["country"];

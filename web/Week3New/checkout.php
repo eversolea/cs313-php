@@ -56,9 +56,9 @@ session_start();
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="browseItems.php">Browse Items</a></li>
+        <li><a href="browseItems.php">Browse Items</a></li>
         <li><a href="viewCart.php">View Cart</a></li>
-        <li><a href="checkout.php">Checkout</a></li>
+        <li class="active"><a href="checkout.php">Checkout</a></li>
         <li><a href="#">Confirmation page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -76,13 +76,13 @@ session_start();
         <div class="panel-body">
         
         <form action="confirmation.php" method="post">
-            Shipping information:
-            <input type="text" name="address1" value="Street Address">
-            <input type="text" name="address2" value="Address Line 2">
-            <input type="text" name="city" value="City">
-            <input type="text" name="zip" value="Postal / Zip Code">
-            <input type="text" name="state" value="State / Province / Region">
-            <input type="text" name="country" value="Country">
+            <h3>Shipping information:</h3><br />
+            Street Address: <input type="text" name="address1" value=""><br />
+            Address Line 2: <input type="text" name="address2" value=""><br />
+            City: <input type="text" name="city" value=""><br />
+            Postal / Zip Code: <input type="text" name="zip" value=""><br />
+            State / Province / Region: <input type="text" name="state" value=""><br />
+            Country: <input type="text" name="country" value=""><br />
             <input type="submit">
         </form>
         
