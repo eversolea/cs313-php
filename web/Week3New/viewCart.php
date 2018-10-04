@@ -76,7 +76,7 @@ session_start();
         <div class="panel-body">
         <?php
         
-        $CartBackup = $_SESSION["cart"]
+        $CartBackup = $_SESSION["cart"];
         
         if($_SESSION["cart"] == "")
         {
