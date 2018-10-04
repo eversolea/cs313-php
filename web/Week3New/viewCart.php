@@ -76,6 +76,8 @@ session_start();
         <div class="panel-body">
         <?php
         
+        $CartBackup = $_SESSION["cart"]
+        
         if($_SESSION["cart"] == "")
         {
             echo "You don't have any items in your cart yet!";
@@ -118,6 +120,8 @@ session_start();
             }
         }
         echo "</h4>";
+        
+        $_SESSION["cart"] = $CartBackup;
         
         ?>
         </div>
