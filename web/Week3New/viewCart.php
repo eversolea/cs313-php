@@ -146,11 +146,6 @@ session_start();
             echo "Master Chief and Cortana: $3   - " . $ItemsArray[5] . " <br />";
         }
         
-        <br />";
-        <br />";
-        <br />";
-        <br />";
-        
         echo "</h3>";
         
         $_SESSION["cart"] = $CartBackup;
