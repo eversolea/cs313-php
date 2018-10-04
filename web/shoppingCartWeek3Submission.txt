@@ -1,0 +1,39 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://enigmatic-bastion-35195.herokuapp.com/Week3New/browseItems.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/eversolea/cs313-php/tree/master/web/Week3New
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+The Browse Items, View Cart, Checkout, and Confirmation page are all functioning. The shopping cart is a session variable that is stored until Checkout is confirmed on the Confirmation page, where it is cleared.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I loved learning about the session varaibles. I think that is super cool, that you can share data among different webpages of the website by just doing a session_start()!
+
+6. List one strength and one limitation of using cookies.
+
+A strength is that your website will remember each user for 30 days, giving the user a lot more ease of access because he/she doesnt have to login/type information twice, etc. 
+
+A limitation of this is that it stores user data and could be seen as a privacy invasion, and users should be informed that the website is using cookies (which a lot of websites do now). Also it isn't as good as making an account because the information is temporary - goes away after 30 days, instead of being stored permamently in the website database
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+E - shows creativity and excels above and beyond requirements
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I was able to get Ordering multiple items working! Try it out (chekck the View Cart page after adding more than one of the same item to the cart) I used a professional design and put a lot of my personality into it :)

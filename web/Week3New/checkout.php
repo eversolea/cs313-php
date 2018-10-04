@@ -59,11 +59,10 @@ session_start();
         <li><a href="browseItems.php">Browse Items</a></li>
         <li><a href="viewCart.php">View Cart</a></li>
         <li class="active"><a href="checkout.php">Checkout</a></li>
-        <li><a href="#">Confirmation page</a></li>
+        <li><a href="confirmation.php">Confirmation page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        <li><a href="viewCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>
   </div>
