@@ -1,0 +1,49 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://enigmatic-bastion-35195.herokuapp.com/home.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/eversolea/cs313-php/tree/master/web
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+My webpage has a navbar to help the user navigate to the assignments page and back. The navbar is "sticky" so the user can navigate even when scrolled down.
+
+It has embedded videos for the user to watch on the homepage.
+
+It has a javascript timer that loads at the very top of the page.
+
+Using php, it displays the server time (and day of the week) as well for user convinence.
+
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+It all should work! The javascript timer in the homepage loads after a 2 second delay, if that needs to be fixed it could be done, although I like the effect it provides!
+
+Also there are 4 errors in console on the homepage, but they are from ads.doubleclick.google because of the youtube videos I embedded, not any of my code.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I learned how versatile code snippets can be - I can embed youtube videos and other very valueable website widgets very effeciently. I also learned how php can be used to get info from the server - when loading it on my laptop it just showed the echo code, but on the server it actually shows the date and time and day of the week! Very cool :)
+
+6. What is the difference between an HTTP Get and Post? When should each be used?
+
+GET retrieves/requests data from a resource. It can request data from the URL, using the ?variable=true syntax after index.php.
+
+POST sends data to a server to create or modify a resource. It is sent in a HTTP request.
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+I think this assignment is an E assignemnt.
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I believe I went above and beyond by working a lot on the style and navigation of this webpage, using javascript and css to make a timer and a floating and sticky navbar. Its really neat! I learned alot about it from websites that I cited in my code.
