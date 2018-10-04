@@ -83,7 +83,39 @@ session_start();
         else
         {
             echo "<h4>";
-    
+            while($_SESSION["cart"] != "")
+            {
+                if(strpos($_SESSION["cart"], 'item1') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item1","",$_SESSION["cart"]);
+                    echo "Energy Sword: $3<br />";
+                }
+                if(strpos($_SESSION["cart"], 'item2') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item2","",$_SESSION["cart"]);
+                    echo "Spartan Helmet: $3<br />";
+                }
+                if(strpos($_SESSION["cart"], 'item3') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item3","",$_SESSION["cart"]);
+                    echo "Plamsa Pistol: $3<br />";
+                }
+                if(strpos($_SESSION["cart"], 'item4') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item4","",$_SESSION["cart"]);
+                    echo "Plasma Rifle: $3<br />";
+                }
+                if(strpos($_SESSION["cart"], 'item5') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item5","",$_SESSION["cart"]);
+                    echo "Cortana AI Chip: $3<br />";
+                }
+                if(strpos($_SESSION["cart"], 'item6') !== false)
+                {
+                    $_SESSION["cart"] = str_replace("item6","",$_SESSION["cart"]);
+                    echo "Master Chief and Cortana: $3<br />";
+                }
+            }
         }
         echo "</h4>";
         
