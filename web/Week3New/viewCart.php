@@ -1,3 +1,9 @@
+<?php
+//Start the session
+session_start();
+?>
+
+
 <html>
 <head>
 <title> Halo Merchandise: View Cart </title>
