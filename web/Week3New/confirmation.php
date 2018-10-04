@@ -74,9 +74,12 @@ session_start();
       <div class="panel panel-primary">
         <div class="panel-heading"><h2>Checkout:</h2></div>
         <div class="panel-body">
+        <h1>
         Order Confirmed! Master Chief says Thank you for your Business :)
+        </h1>
+        <img src="masterChief.jpg" />
         <br />
-        <h3> Your Items: </h3><br /><br />
+        <h3> Your Items: </h3>
         <?php
         $CartBackup = $_SESSION["cart"];
         
@@ -121,8 +124,7 @@ session_start();
                 }
             }
         }
-        echo "</h3>";
-        
+       
         $_SESSION["cart"] = $CartBackup;
         ?>
         <br />
@@ -182,11 +184,16 @@ session_start();
         {
             echo "Country not provided";
         } 
+        echo "</h3>"
         ?>  
         
         </div>
         <div class="panel-footer">
-        
+        <?php
+        $_SESSION["cart"] = ""
+        /*Clear cart */
+        ?>
+        <a class="btn btn-primary" href="browseItems.php">Buy some more stuff!</a>
         </div>
     </div>
     

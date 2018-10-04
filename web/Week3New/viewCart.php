@@ -126,7 +126,14 @@ session_start();
         ?>
         </div>
         <div class="panel-footer">
-        <a class="btn btn-default" href="checkout.php">Check Out</a>
+        <a class="btn btn-primary" href="checkout.php">Check Out</a>
+        <br /><br />
+        
+        <br /><br />
+        
+        <h4> Did you know that the Trumps support Master Chief?</h4>
+        <img src="donaldTrump.png" />
+        <img src="trump.jpg" />
         </div>
     </div>
     

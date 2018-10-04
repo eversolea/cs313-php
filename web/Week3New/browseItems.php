@@ -155,7 +155,7 @@ if(isset($_GET["Item6"]))
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Plasma Rifle</div>
-        <div class="panel-body"><img src=" plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-body"><img src="plasmaRifle.png" class="img-responsive" style="width:100%" alt="Image"></div>
         <div class="panel-footer">$3 
         <form action="browseItems.php" method="get">
         <input type="submit" name="Item4" class="btn btn-danger" value="Add to Cart"/>
