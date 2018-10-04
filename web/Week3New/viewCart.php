@@ -75,7 +75,7 @@ session_start();
         <div class="panel-body">
         <?php
         
-        $ItemsArray = array(0,0,0,0,0,0)
+        $ItemsArray = array(0,0,0,0,0,0);
         
         $CartBackup = $_SESSION["cart"];
         
@@ -154,7 +154,7 @@ session_start();
         echo "</h3>";
         
         $_SESSION["cart"] = $CartBackup;
-        $ItemsArray = array(0,0,0,0,0,0)
+        $ItemsArray = array(0,0,0,0,0,0);
         
         ?>
         </div>
