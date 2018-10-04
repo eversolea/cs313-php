@@ -6,7 +6,7 @@ session_start();
 
 <html>
 <head>
-<title> Halo Merchandise: View Cart </title>
+<title> Halo Merchandise: Checkout </title>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -38,7 +38,7 @@ session_start();
 
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Halo Merchandise: View Cart</h1>
+    <h1>Halo Merchandise: Checkout</h1>
  
     <p>All your favorite Halo items - for cheap!</p>
   </div>
@@ -72,58 +72,61 @@ session_start();
 <div class="container">    
   <div class="row">
       <div class="panel panel-primary">
-        <div class="panel-heading"><h2>Your Cart:</h2></div>
+        <div class="panel-heading"><h2>Checkout:</h2></div>
         <div class="panel-body">
+        Order Confirmed! Master Chief says Thank you for your Business :)
+        <br />
         <?php
-        
-        $CartBackup = $_SESSION["cart"];
-        
-        if($_SESSION["cart"] == "")
+        if(isset($_POST["address1"]))
         {
-            echo "You don't have any items in your cart yet!";
+            echo "Street Address:" . $_POST["address1"];
         }
         else
         {
-            echo "<h4>";
-            while($_SESSION["cart"] != "")
-            {
-                if(strpos($_SESSION["cart"], 'item1') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item1/', '', $_SESSION["cart"], 1);
-                    echo "Energy Sword: $3<br />";
-                }
-                else if(strpos($_SESSION["cart"], 'item2') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item2/', '', $_SESSION["cart"], 1);
-                    echo "Spartan Helmet: $5<br />";
-                }
-                else if(strpos($_SESSION["cart"], 'item3') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item3/', '', $_SESSION["cart"], 1);
-                    echo "Plamsa Pistol: $3<br />";
-                }
-                else if(strpos($_SESSION["cart"], 'item4') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item4/', '', $_SESSION["cart"], 1);
-                    echo "Plasma Rifle: $3<br />";
-                }
-                else if(strpos($_SESSION["cart"], 'item5') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item5/', '', $_SESSION["cart"], 1);
-                    echo "Cortana AI Chip: $4.50<br />";
-                }
-                else if(strpos($_SESSION["cart"], 'item6') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item6/', '', $_SESSION["cart"], 1);
-                    echo "Master Chief and Cortana: $3<br />";
-                }
-            }
+            echo "Street Address not provided";
         }
-        echo "</h4>";
+        if(isset($_POST["address2"]))
+        {
+            echo "Address Line 2:" . $_POST["address2"];
+        }
+        else
+        {
+            echo "Address Line 2 not provided";
+        }
+        if(isset($_POST["city"]))
+        {
+            echo "City:" . $_POST["city"];
+        }
+        else
+        {
+            echo "City not provided";
+        }
+        if(isset($_POST["zip"]))
+        {
+            echo "Postal / Zip Code:" . $_POST["zip"];
+        }
+        else
+        {
+            echo "Postal / Zip Code not provided";
+        }
+        if(isset($_POST["state"]))
+        {
+            echo "State / Province / Region:" . $_POST["state"];
+        }
+        else
+        {
+            echo "State / Province / Region not provided";
+        }
+        if(isset($_POST["country"]))
+        {
+             echo "Country" . $_POST["country"];
+        }
+        else
+        {
+            echo "Country not provided";
+        } 
+        ?>  
         
-        $_SESSION["cart"] = $CartBackup;
-        
-        ?>
         </div>
         <div class="panel-footer">
         

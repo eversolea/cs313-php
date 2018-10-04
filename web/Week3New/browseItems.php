@@ -83,8 +83,8 @@ if(isset($_GET["Item6"]))
       <ul class="nav navbar-nav">
         <li class="active"><a href="browseItems.php">Browse Items</a></li>
         <li><a href="viewCart.php">View Cart</a></li>
-        <li><a href="#">Checkout</a></li>
-        <li><a href="#">Confirmation page</a></li>
+        <li><a href="checkout.php">Checkout</a></li>
+        <li><a href="confirmation.php">Confirmation page</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
