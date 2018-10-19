@@ -213,7 +213,7 @@ if(isset($_GET["Item6"]))
     
     $stmt = $db->prepare('SELECT * FROM costumes');
     $result = $stmt->execute();
-    echo "dump from database: $result";
+    echo "dump from database: $stmt";
     #$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     ?>
