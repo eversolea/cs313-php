@@ -207,17 +207,16 @@ if(isset($_GET["Item6"]))
 </div><br><br>
 
 <footer class="container-fluid text-center">
-
+  <p>Halo Merchandise Store: All Rights Reserved</p>  
     <?
     $db = get_db();
     
     $stmt = $db->prepare('SELECT * FROM costumes');
-    $stmt->execute();
+    $result = $stmt->execute();
+    echo "dump from database: $result";
     #$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
     ?>
-
-
-  <p>Halo Merchandise Store: All Rights Reserved</p>  
   <form class="form-inline">Get deals:
     <input type="email" class="form-control" size="50" placeholder="Email Address">
     <button type="button" class="btn btn-danger">Sign Up</button>
