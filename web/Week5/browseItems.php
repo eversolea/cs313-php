@@ -215,7 +215,7 @@ if(isset($_GET["Item6"]))
     $result = $stmt->execute();
     
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-      print("$row['name']");
+      echo $row['name'];
 }
     
     ?>
