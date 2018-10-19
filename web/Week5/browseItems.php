@@ -1,6 +1,7 @@
 <?php
 //Start the session
 session_start();
+require('dbConnect.php')
 ?>
 
 <html>
@@ -207,9 +208,7 @@ if(isset($_GET["Item6"]))
 
 <footer class="container-fluid text-center">
 
-
-    <?php
-    require('dbConnect.php')
+    <?
     $db = get_db();
     
     $stmt = $db->prepare('SELECT * FROM costumes');
