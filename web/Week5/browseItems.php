@@ -116,13 +116,14 @@ if(isset($_GET['Item6']))
     echo $row['price'];
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
-        </form>
-        <?php
-        if(strpos($_SESSION['cart'], 'item1') !== false)
-        {
-            echo '<div class='alert alert-success'>Item Bought!</div>';
-        }
-        ?>
+        </form>";
+        
+    #I'll need to fix this php code to work with dynamically generated items now
+    if(strpos($_SESSION['cart'], 'item1') !== false)
+    {
+        echo '<div class='alert alert-success'>Item Bought!</div>';
+    }
+    echo "
         </div>
       </div>
     </div>";
