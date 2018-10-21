@@ -95,7 +95,18 @@ if(isset($_GET["Item6"]))
 </nav>
 
 <div class="container">    
-  <div class="row">
+   <?
+    $db = get_db();
+    
+    $stmt = $db->prepare('SELECT * FROM costumes');
+    $result = $stmt->execute();
+    
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+      echo $row['name'];
+}
+    
+    ?>
+  
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Energy Sword</div>
@@ -147,66 +158,7 @@ if(isset($_GET["Item6"]))
         </div>
       </div>
     </div>
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><img src="logo.jpg" height="30" /></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="browseItems.php">Browse Items</a></li>
-        <li><a href="viewCart.php">View Cart</a></li>
-        <li><a href="checkout.php">Checkout</a></li>
-        <li><a href="confirmation.php">Confirmation page</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="viewCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">Energy Sword</div>
-        <div class="panel-body"><img src=" energySword.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$3 
-        <form action="browseItems.php" method="get">
-        <input type="submit" name="Item1" class="btn btn-danger" value="Add to Cart"/>       
-        </form>
-        <?php
-        if(strpos($_SESSION["cart"], 'item1') !== false)
-        {
-            echo "<div class='alert alert-success'>Item Bought!</div>";
-        }
-        ?>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">Spartan Helmet</div>
-        <div class="panel-body"><img src=" helmet.png" class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$5 
-        <form action="browseItems.php" method="get">
-        <input type="submit" name="Item2" class="btn btn-danger" value="Add to Cart"/>
-        </form>
-        <?php
-        if(strpos($_SESSION["cart"], 'item2') !== false)
-        {
-            echo "<div class='alert alert-success'>Item Bought!</div>";
-        }
-        ?>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
+  <div class="col-sm-4"> 
       <div class="panel panel-success">
         <div class="panel-heading">Plasma Pistol</div>
         <div class="panel-body"><img src=" plasmaPistol.png" class="img-responsive" style="width:100%" alt="Image"></div>
@@ -223,7 +175,6 @@ if(isset($_GET["Item6"]))
         </div>
       </div>
     </div>
-  </div>
 </div><br>
 
 <div class="container">    
@@ -284,7 +235,7 @@ if(isset($_GET["Item6"]))
 
 <footer class="container-fluid text-center">
   <p>Halo Merchandise Store: All Rights Reserved</p>  
-
+ 
   <form class="form-inline">Get deals:
     <input type="email" class="form-control" size="50" placeholder="Email Address">
     <button type="button" class="btn btn-danger">Sign Up</button>
