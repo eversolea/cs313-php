@@ -127,8 +127,97 @@ if(isset($_GET['Item6']))
         </div>
       </div>
     </div>";
-    
     }
+    
+    $stmt = $db->prepare('SELECT * FROM games');
+    $result = $stmt->execute();
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    {
+    echo" <div class='col-sm-4'>
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>";
+    echo $row['name'];
+    echo "</div>
+        <div class='panel-body'><img src=' ";
+    echo $row['image'];
+    echo "' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>";
+    echo $row['price'];
+    echo "<br /> Rating:"
+    echo $row['rating'];
+    echo "<br /> Year Released: "
+    echo $row['yearreleased'];
+    echo "<br /> Synopsis:";
+    echo $row['synopsis'];
+    echo "<form action='browseItems.php' method='get'>
+        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        </form>";
+        
+    #I'll need to fix this php code to work with dynamically generated items now
+    if(strpos($_SESSION['cart'], 'item1') !== false)
+    {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+    }
+    echo "
+        </div>
+      </div>
+    </div>";
+    }
+    
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    {
+    echo" <div class='col-sm-4'>
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>";
+    echo $row['name'];
+    echo "</div>
+        <div class='panel-body'><img src=' ";
+    echo $row['image'];
+    echo "' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>";
+    echo $row['price'];
+    echo "<form action='browseItems.php' method='get'>
+        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        </form>";
+        
+    #I'll need to fix this php code to work with dynamically generated items now
+    if(strpos($_SESSION['cart'], 'item1') !== false)
+    {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+    }
+    echo "
+        </div>
+      </div>
+    </div>";
+    }
+    
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    {
+    echo" <div class='col-sm-4'>
+      <div class='panel panel-primary'>
+        <div class='panel-heading'>";
+    echo $row['name'];
+    echo "</div>
+        <div class='panel-body'><img src=' ";
+    echo $row['image'];
+    echo "' class='img-responsive' style='width:100%' alt='Image'></div>
+        <div class='panel-footer'>";
+    echo $row['price'];
+    echo "<form action='browseItems.php' method='get'>
+        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        </form>";
+        
+    #I'll need to fix this php code to work with dynamically generated items now
+    if(strpos($_SESSION['cart'], 'item1') !== false)
+    {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+    }
+    echo "
+        </div>
+      </div>
+    </div>";
+    }
+    
     
     ?>
 </div><br><br>
