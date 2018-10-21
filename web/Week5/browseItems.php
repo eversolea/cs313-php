@@ -163,6 +163,8 @@ if(isset($_GET['Item6']))
       </div>
     </div>";
     }
+    $stmt = $db->prepare('SELECT * FROM toys');
+    $result = $stmt->execute();
     
     while($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
@@ -176,6 +178,10 @@ if(isset($_GET['Item6']))
     echo "' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>";
     echo $row['price'];
+    echo "<br /> Toy Size:"
+    echo $row['isize'];
+    echo "<br /> For Kids?:"
+    echo $row['forkids'];
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
@@ -191,7 +197,9 @@ if(isset($_GET['Item6']))
     </div>";
     }
     
-        while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    $stmt = $db->prepare('SELECT * FROM other');
+    $result = $stmt->execute();
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
     echo" <div class='col-sm-4'>
       <div class='panel panel-primary'>
@@ -203,6 +211,8 @@ if(isset($_GET['Item6']))
     echo "' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>";
     echo $row['price'];
+    echo "<br /> Toy Size:"
+    echo $row['isize'];
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
