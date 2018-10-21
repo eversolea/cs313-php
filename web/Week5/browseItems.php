@@ -143,7 +143,7 @@ if(isset($_GET['Item6']))
     echo "' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>";
     echo $row['price'];
-    echo "<br /> Rating:"
+    echo "<br /> Rating:";
     echo $row['rating'];
     echo "<br /> Year Released: "
     echo $row['yearreleased'];
