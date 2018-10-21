@@ -5,7 +5,8 @@ CREATE TABLE toys
     , price money
     , isize numeric
     , forKids boolean
-    , website VARCHAR(200)
+    , website VARCHAR(400)
+    , image VARCHAR(400)
 );
 
 CREATE TABLE costumes
@@ -14,7 +15,8 @@ CREATE TABLE costumes
     , name VARCHAR(50) 
     , price money
     , isize numeric
-    , website VARCHAR(200)
+    , website VARCHAR(400)
+    , image VARCHAR(400)
 
 );
 
@@ -26,7 +28,8 @@ CREATE TABLE games
     , yearReleased smallserial
     , synopsis text
     , rating character(3) --E, E10, T, M, AO
-    , website VARCHAR(200)
+    , website VARCHAR(400)
+    , image VARCHAR(400)
 
 );
 
@@ -36,6 +39,7 @@ CREATE TABLE other
     , name VARCHAR(50) 
     , price money
     , iSize numeric
-    , website VARCHAR(200)
+    , website VARCHAR(400)
+    , image VARCHAR(400)
 
 );
