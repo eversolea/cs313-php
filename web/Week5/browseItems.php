@@ -145,7 +145,7 @@ if(isset($_GET['Item6']))
     echo $row['price'];
     echo "<br /> Rating:";
     echo $row['rating'];
-    echo "<br /> Year Released: "
+    echo "<br /> Year Released: ";
     echo $row['yearreleased'];
     echo "<br /> Synopsis:";
     echo $row['synopsis'];
@@ -178,9 +178,9 @@ if(isset($_GET['Item6']))
     echo "' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>";
     echo $row['price'];
-    echo "<br /> Toy Size:"
+    echo "<br /> Toy Size:";
     echo $row['isize'];
-    echo "<br /> For Kids?:"
+    echo "<br /> For Kids?:";
     echo $row['forkids'];
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
@@ -211,7 +211,7 @@ if(isset($_GET['Item6']))
     echo "' class='img-responsive' style='width:100%' alt='Image'></div>
         <div class='panel-footer'>";
     echo $row['price'];
-    echo "<br /> Toy Size:"
+    echo "<br /> Toy Size:";
     echo $row['isize'];
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
