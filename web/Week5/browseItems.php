@@ -121,7 +121,7 @@ if(isset($_GET['Item6']))
     #I'll need to fix this php code to work with dynamically generated items now
     if(strpos($_SESSION['cart'], 'item1') !== false)
     {
-        echo '<div class='alert alert-success'>Item Bought!</div>';
+        echo "<div class='alert alert-success'>Item Bought!</div>";
     }
     echo "
         </div>
