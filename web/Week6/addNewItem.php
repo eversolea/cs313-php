@@ -137,7 +137,7 @@ $db = get_db();
         if($_POST["itemType"] == '1') {
             echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."',  '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');";
             $statement1 = $db->prepare("INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');");
-            #\$statement1->execute();
+            $statement1->execute();
         }
 
         if($_POST["itemType"] == '2') {
