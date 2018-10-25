@@ -155,7 +155,13 @@ $db = get_db();
         
         if($_POST["itemType"] == '4') {
             echo "DELETE FROM costumes WHERE name = '" . $_POST["name"] ."';";
-            $statement1 = $db->prepare("DELETE FROM costumes WHERE name = '" . $_POST["name"] ."';DELETE FROM games WHERE name = '" . $_POST["name"] ."';DELETE FROM toys WHERE name = '" . $_POST["name"] ."';DELETE FROM other WHERE name = '" . $_POST["name"] ."';");
+            $statement1 = $db->prepare("DELETE FROM costumes WHERE name = '" . $_POST["name"] ."';");
+            $statement1->execute();
+            $statement1 = $db->prepare("DELETE FROM toys WHERE name = '" . $_POST["name"] ."';");
+            $statement1->execute();
+            $statement1 = $db->prepare("DELETE FROM games WHERE name = '" . $_POST["name"] ."';");
+            $statement1->execute();
+            $statement1 = $db->prepare("DELETE FROM other WHERE name = '" . $_POST["name"] ."';");
             $statement1->execute();
         }
         
