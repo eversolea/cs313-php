@@ -129,13 +129,13 @@ $db = get_db();
         <?php
         
         if($_POST["itemType"] == '0') {
-            echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["website"]."', '".$_POST["image"]."');";
+            echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."', '".$_POST["website"]."', '".$_POST["image"]."');";
             $statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["website"]."', '".$_POST["image"]."');");
             $statement1->execute();
         }      
         
         if($_POST["itemType"] == '1') {
-            echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');";
+            echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."',  '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');";
             $statement1 = $db->prepare("INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');");
             #\$statement1->execute();
         }
