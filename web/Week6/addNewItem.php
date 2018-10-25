@@ -17,6 +17,7 @@ session_start();
   <script>
     document.getElementById("changeForm").onclick = function(){updateForm()};
     function updateForm() {
+        document.getElementById("test").innerHTML = "yoyoyo";
         var d = document.getElementById("myDropdown");
         var table = d.options[e.selectedIndex].value;
         
@@ -127,7 +128,7 @@ session_start();
         <div class="panel-heading"><h2>Do you have a new item to add?</h2></div>
         <div class="panel-body">
         
-        
+        <div id="test">
 
         <button id="changeForm">Click to update entry form</button>
         <select id="myDropdown">
@@ -148,7 +149,7 @@ session_start();
             Thumbnail Image URL: <input type="text" name="image" value=""><br />
             <input type="submit">
         </form>
-        
+        </div>
         
         <?php
 
