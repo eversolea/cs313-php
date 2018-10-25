@@ -18,7 +18,7 @@ session_start();
     function updateForm() {
         var d = document.getElementById("myDropdown");
         var table = d.options[e.selectedIndex].value;
-        
+        alert(value);
         if(table = "1")
         {
             document.getElementById("EntryFormTitle").innerHTML = "Entry Form: Costumes";
@@ -41,7 +41,7 @@ session_start();
             Thumbnail Image URL: <input type='text' name='image' value=''><br />
             <input type='submit'>";
         }
-        if(table = "3")
+        else if(table = "3")
         {
             document.getElementById("EntryFormTitle").innerHTML = "Entry Form: Toys";
             document.getElementById("EntryForm")innerHTML = "Name: <input type='text' name='name' value=''><br />
@@ -52,7 +52,7 @@ session_start();
             Thumbnail Image URL: <input type='text' name='image' value=''><br />
             <input type='submit'>";
         }
-        if(table = "4")
+        else if(table = "4")
         {
             document.getElementById("EntryFormTitle").innerHTML = "Entry Form: Other";
             document.getElementById("EntryForm")innerHTML = "Name: <input type='text' name='name' value=''><br />
