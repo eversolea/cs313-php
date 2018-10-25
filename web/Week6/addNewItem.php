@@ -145,7 +145,7 @@ session_start();
         
         if($_POST["itemType"] == '3') {
             echo "INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."','".$_POST["website"]."', '".$_POST["image"]."');";
-            $statement1 = $db->prepare("INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."','".$_POST["website"]."', '".$_POST["image"]."');")
+            $statement1 = $db->prepare("INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."','".$_POST["website"]."', '".$_POST["image"]."');");
             $statement1->execute();
         }
         
