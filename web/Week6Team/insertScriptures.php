@@ -36,7 +36,7 @@ $db = get_db();
 $statement = $db->prepare("SELECT name FROM topic");
 $statement->execute();
 // Go through each result
-$i = 1
+$i = 1;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
     $i = $i + 1;
