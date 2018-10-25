@@ -26,9 +26,9 @@ echo "<br />Content:";
 echo $_POST["content"];
 
 echo "<br />Topics:<br />";
-if(!empty($_POST['topic[]'])){
+if(!empty($_POST["topic[]"])){
 // Loop to store and display values of individual checked checkbox.
-foreach($_POST['topic[]'] as $selected){
+foreach($_POST["topic[]"] as $selected){
 echo $selected."</br>";
 }
 }
