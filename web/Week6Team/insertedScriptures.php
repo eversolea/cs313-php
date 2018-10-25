@@ -35,9 +35,7 @@ echo $selected."</br>";
 
 
 
-$statement1 = $db->prepare("
-INSERT INTO scripture (book, chapter, verse, content)
-  VALUES ('".$_POST["book"];."', ".$_POST["chapter"];.", ".$_POST["verse"];.", ".echo $_POST["content"];.");");
+$statement1 = $db->prepare("INSERT INTO scripture (book, chapter, verse, content) VALUES ('".$_POST["book"]."', ".$_POST["chapter"].", ".$_POST["verse"].", ".$_POST["content"].");");
 $statement1->execute();
 
 
