@@ -34,25 +34,26 @@ echo $selected."</br>";
 }
 
 
-/*
-$statement = $db->prepare("SELECT name FROM topic");
-$statement->execute();
+
+$statement1 = $db->prepare("
+INSERT INTO scripture (book, chapter, verse, content)
+  VALUES ('".$_POST["book"];."', ".$_POST["chapter"];.", ".$_POST["verse"];.", ".echo $_POST["content"];.");");
+$statement1->execute();
+
+
+$statement2 = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+$statement2->execute();
 // Go through each result
-$i = 1
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-    $i = $i + 1;
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	echo '<input type="checkbox" name="topic';
-	echo  $i;
-	echo '" value="';
-    echo $row["name"];
-    echo '">';
-    echo $row["name"];
-    echo '<br />';
-}*/
+	echo '<p>';
+	echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
+	echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
+	echo '</p>';
+}
 ?>
 
 </div>
