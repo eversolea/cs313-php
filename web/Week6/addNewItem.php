@@ -130,7 +130,7 @@ $db = get_db();
         
         if($_POST["itemType"] == '0') {
             echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."', '".$_POST["website"]."', '".$_POST["image"]."');";
-            $statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["website"]."', '".$_POST["image"]."');");
+            $statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."', '".$_POST["website"]."', '".$_POST["image"]."');");
             $statement1->execute();
         }      
         
