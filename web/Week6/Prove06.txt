@@ -1,0 +1,42 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://enigmatic-bastion-35195.herokuapp.com/Week6/browseItems.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/eversolea/cs313-php/tree/master/web/Week6
+(addNewItem.php adds and deletes entries. You can view them at browseItems.php)
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+Adding items in any of the tables works
+Delete any of the items work
+The items will be updated in the Browse Items
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+The Shopping cart functionality broke when I changed the Item generation to be based on the database instead of hardcoded.
+I will fix this next week during the polish up process.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I love how everything works! Everything was leading up to the sql statment execution, and when it finally happens right, its such a satisfying feeling seein my new items appear and deleted items dissapear. Learning about the custom SQL statment creation and execution is defiatley the coolest part of this assignment.
+
+6. What is a benefit of having a foreign key constraint?
+
+It helps when you have multiple tables in which you want a many-to-many relationship.
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+E
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I got the deletion working! I thought that was really cool and was hoping that went beyond the requirements, because I was just focusing on adding to each different table. 
