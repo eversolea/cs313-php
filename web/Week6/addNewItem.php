@@ -125,25 +125,25 @@ session_start();
         
         <?php
         
-        if($_POST["itemType"] = '0') {}
+        if($_POST["itemType"] = '0') {
             echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");";
             #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
             #$statement1->execute();
         }      
         
-        if($_POST["itemType"] = '1') {}
+        if($_POST["itemType"] = '1') {
             echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["year"].",".$_POST["synopsis"].",".$_POST["rating"].",".$_POST["website"].", ".$_POST["image"].");";
             #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
             #$statement1->execute();
         }
 
-        if($_POST["itemType"] = '2') {}
+        if($_POST["itemType"] = '2') {
             echo "INSERT INTO toys (name,price,isize,forkids,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["size"].", ".$_POST["kids"].",".$_POST["website"].", ".$_POST["image"].");";
             #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
             #$statement1->execute();
         }
         
-        if($_POST["itemType"] = '3') {}
+        if($_POST["itemType"] = '3') {
             echo "INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["size"].",".$_POST["website"].", ".$_POST["image"].");";
             #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
             #$statement1->execute();
