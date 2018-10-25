@@ -128,7 +128,7 @@ session_start();
         
         
 
-        <button onclick="updateForm()" class="dropbtn">Click to update entry form</button>
+        <button onclsck="updateForm()">Click to update entry form</button>
         <select id="myDropdown">
             <option selected="selected" value="1">Costumes</option>
             <option value="2">Games</option>
