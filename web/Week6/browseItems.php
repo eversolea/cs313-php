@@ -86,6 +86,7 @@ if(isset($_GET['Item6']))
         <li><a href='viewCart.php'>View Cart</a></li>
         <li><a href='checkout.php'>Checkout</a></li>
         <li><a href='confirmation.php'>Confirmation page</a></li>
+        <li><a href="addNewItem.php">Add New Item</a></li>
       </ul>
       <ul class='nav navbar-nav navbar-right'>
         <li><a href='viewCart.php'><span class='glyphicon glyphicon-shopping-cart'></span> Cart</a></li>

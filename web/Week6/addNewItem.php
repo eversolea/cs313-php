@@ -60,9 +60,10 @@ $db = get_db();
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="browseItems.php">Browse Items</a></li>
-        <li class="active"><a href="viewCart.php">View Cart</a></li>
+        <li><a href="viewCart.php">View Cart</a></li>
         <li><a href="checkout.php">Checkout</a></li>
         <li><a href="confirmation.php">Confirmation page</a></li>
+        <li class="active"><a href="addNewItem.php">Add New Item</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="viewCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
@@ -152,8 +153,22 @@ $db = get_db();
             $statement1->execute();
         }
         
+        if($_POST["itemType"] == '4') {
+            echo "DELETE FROM costumes WHERE name = '" . $_POST["name"] ."';";
+            $statement1 = $db->prepare("DELETE FROM costumes WHERE name = '" . $_POST["name"] ."';DELETE FROM games WHERE name = '" . $_POST["name"] ."';DELETE FROM toys WHERE name = '" . $_POST["name"] ."';DELETE FROM other WHERE name = '" . $_POST["name"] ."';");
+            $statement1->execute();
+        }
+        
         ?>
         </div>
+        
+        Want to Delete an item?
+         <form id="DeleteForm" action="addNewItem.php" method="post">
+            <input type="hidden" name="itemType" value="4" />
+            Exact Name of item to delete: <input type='text' name='name' value=''><br />
+            <input type="submit">
+         </form>
+        
         <div class="panel-footer">
         <a class="btn btn-primary" href="checkout.php">Check Out</a>
         <br /><br />
