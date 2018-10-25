@@ -43,9 +43,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	echo '<input type="checkbox" name="topic[]';
-	echo  $i;
-	echo '" value="';
+	echo '<input type="checkbox" name="topic[]" value="';
     echo $row["name"];
     echo '">';
     echo $row["name"];
