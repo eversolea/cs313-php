@@ -1,6 +1,9 @@
 <?php
 //Start the session
 session_start();
+
+require "dbConnect.php";
+$db = get_db();
 ?>
 
 
