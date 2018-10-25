@@ -105,7 +105,7 @@ session_start();
             Name: <input type='text' name='name' value=''><br />
             Price: <input type='text' name='price' value=''><br />
             Item Size: <input type='text' name='size' value=''><br />
-            For Kids? (Y/N): <input type='text' name='kids' value=''><br />
+            For Kids? (True,): <input type='text' name='kids' value=''><br />
             Webpage URL: <input type='text' name='website' value=''><br />
             Thumbnail Image URL: <input type='text' name='image' value=''><br />
             <input type='submit'>
@@ -126,27 +126,27 @@ session_start();
         <?php
         
         if($_POST["itemType"] == '0') {
-            echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");";
-            #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
-            #$statement1->execute();
+            echo "INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["website"]."', '".$_POST["image"]."');";
+            $statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["website"]."', '".$_POST["image"]."');");
+            $statement1->execute();
         }      
         
         if($_POST["itemType"] == '1') {
-            echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["year"].",".$_POST["synopsis"].",".$_POST["rating"].",".$_POST["website"].", ".$_POST["image"].");";
-            #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
-            #$statement1->execute();
+            echo "INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');";
+            $statement1 = $db->prepare("INSERT INTO games (name,price,yearreleased,synopsis,rating,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["year"]."','".$_POST["synopsis"]."','".$_POST["rating"]."','".$_POST["website"]."', '".$_POST["image"]."');");
+            #\$statement1->execute();
         }
 
         if($_POST["itemType"] == '2') {
-            echo "INSERT INTO toys (name,price,isize,forkids,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["size"].", ".$_POST["kids"].",".$_POST["website"].", ".$_POST["image"].");";
-            #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
-            #$statement1->execute();
+            echo "INSERT INTO toys (name,price,isize,forkids,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."', '".$_POST["kids"]."','".$_POST["website"]."', '".$_POST["image"]."');";
+            $statement1 = $db->prepare("INSERT INTO toys (name,price,isize,forkids,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."', '".$_POST["kids"]."','".$_POST["website"]."', '".$_POST["image"]."');");
+            $statement1->execute();
         }
         
         if($_POST["itemType"] == '3') {
-            echo "INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["size"].",".$_POST["website"].", ".$_POST["image"].");";
-            #$statement1 = $db->prepare("INSERT INTO costumes (name,price,isize,website,image) VALUES ('".$_POST["name"]."', ".$_POST["price"].", ".$_POST["website"].", ".$_POST["image"].");");
-            #$statement1->execute();
+            echo "INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."','".$_POST["website"]."', '".$_POST["image"]."');";
+            $statement1 = $db->prepare("INSERT INTO other (name,price,isize,website,image) VALUES ('".$_POST["name"]."', '".$_POST["price"]."', '".$_POST["size"]."','".$_POST["website"]."', '".$_POST["image"]."');")
+            $statement1->execute();
         }
         
         ?>
