@@ -36,14 +36,14 @@ $db = get_db();
 $statement = $db->prepare("SELECT name FROM topics;");
 $statement->execute();
 // Go through each result
-$i = 1;
+$i = 0;
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
     $i = $i + 1;
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	echo '<input type="checkbox" name="topic';
+	echo '<input type="checkbox" name="topic[]';
 	echo  $i;
 	echo '" value="';
     echo $row["name"];
@@ -52,7 +52,6 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     echo '<br />';
 }
 ?>
-<input name="field1" type="hidden" value="<?php echo $i ?>"/>
 <br /><input type="submit" method="post">
 </form>
 

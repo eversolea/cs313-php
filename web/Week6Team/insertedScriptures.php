@@ -16,12 +16,24 @@ $db = get_db();
 
 <?php
 
+echo "Book:";
 echo $_POST["book"];
+echo "<br />Chapter:";
 echo $_POST["chapter"];
+echo "<br />Verse:";
 echo $_POST["verse"];
-echo $_POST["book"];
+echo "<br />Content:";
 echo $_POST["content"];
-echo $_POST["field1"];
+
+echo "<br />Topics:<br />";
+if(!empty($_POST['topic[]'])){
+// Loop to store and display values of individual checked checkbox.
+foreach($_POST['topic[]'] as $selected){
+echo $selected."</br>";
+}
+}
+
+
 /*
 $statement = $db->prepare("SELECT name FROM topic");
 $statement->execute();
