@@ -18,7 +18,7 @@ session_start();
     function updateForm() {
         var d = document.getElementById("myDropdown");
         var table = d.options[e.selectedIndex].value;
-        alert(value);
+        
         if(table = "1")
         {
             document.getElementById("EntryFormTitle").innerHTML = "Entry Form: Costumes";
@@ -128,7 +128,7 @@ session_start();
         
         
 
-        <button onclsck="updateForm()">Click to update entry form</button>
+        <button onclick="updateForm()">Click to update entry form</button>
         <select id="myDropdown">
             <option selected="selected" value="1">Costumes</option>
             <option value="2">Games</option>
