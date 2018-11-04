@@ -157,7 +157,7 @@ session_start();
         </div>
         <div class="panel-footer">
         <?php
-        $_SESSION["cart"] = ""
+        $_SESSION["cart"] = NULL;
         /*Clear cart */
         ?>
         <a class="btn btn-primary" href="browseItems.php">Buy some more stuff!</a>

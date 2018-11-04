@@ -84,7 +84,7 @@ session_start();
         {
             echo "<h3>";
             foreach($_SESSION["cart"] as $result) {
-                echo $result, '<br>';
+                echo $result . '<br>';
             }
 
         ?>
