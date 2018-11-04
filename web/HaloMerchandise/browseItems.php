@@ -39,8 +39,8 @@ require('dbConnect.php')
 
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
-    $cart .= preg_replace('_', ' ', $param_name, -1)
-    echo "$cart"
+    $cart .= preg_replace('_', ' ', $param_name, -1);
+    echo "$cart";
     
 }
 
