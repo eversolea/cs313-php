@@ -77,8 +77,9 @@ session_start();
         <?php
         
         $ItemsArray = array(0,0,0,0,0,0);
-        echo $CartBackup;
+
         $CartBackup = $_SESSION["cart"];
+        echo $CartBackup;
         
         if($_SESSION["cart"] == "")
         {
