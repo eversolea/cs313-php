@@ -154,6 +154,8 @@ if(isset($_GET['Item6']))
     #I'll need to fix this php code to work with dynamically generated items now
     $searchQuery = $row['name'] . " " . $row['price'];
     if(in_array($searchQuery,$_SESSION['cart'])){
+        echo $searchQuery;
+        print_r($_SESSION['cart']);
         echo "<div class='alert alert-success'>Item Bought!</div>";
     }
     echo "
