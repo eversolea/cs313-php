@@ -36,6 +36,18 @@ require('dbConnect.php')
 </head>
 <body>
 <?php
+function str_lreplace($search, $replace, $subject)
+{
+    $pos = strrpos($subject, $search);
+
+    if($pos !== false)
+    {
+        $subject = substr_replace($subject, $replace, $pos, strlen($search));
+    }
+
+    return $subject;
+}
+
 if(!isset($_SESSION['first_run'])){
     $_SESSION['first_run'] = 1;
     $cart = [];
@@ -43,8 +55,9 @@ if(!isset($_SESSION['first_run'])){
 
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
-    $newitem  = str_replace('_', '', $param_name);
-    echo "$param_name";
+    $newitem = str_lreplace("_",".",$param_name)
+    $newitem = str_replace('_', '&nbsp;', $newitem);
+    echo "$newitem";
     $cart[] = $param_name;
     
 }
