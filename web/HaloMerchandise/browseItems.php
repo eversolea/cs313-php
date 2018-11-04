@@ -152,8 +152,8 @@ if(isset($_GET['Item6']))
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
-    if(strpos($_SESSION['cart'], 'item1') !== false)
-    {
+    $searchQuery = $row['name'] . " " . $row['price'];
+    if(in_array($searchQuery,$_SESSION['cart'])){
         echo "<div class='alert alert-success'>Item Bought!</div>";
     }
     echo "

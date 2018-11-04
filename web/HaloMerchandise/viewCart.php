@@ -75,12 +75,7 @@ session_start();
         <div class="panel-heading"><h2>Your Cart:</h2></div>
         <div class="panel-body">
         <?php
-        
-        $ItemsArray = array(0,0,0,0,0,0);
 
-        $CartBackup = $_SESSION["cart"];
-        echo $CartBackup;
-        
         if($_SESSION["cart"] == "")
         {
             echo "You don't have any items in your cart yet!";
@@ -91,72 +86,7 @@ session_start();
             foreach($_SESSION["cart"] as $result) {
                 echo $result, '<br>';
             }
-            #while($_SESSION["cart"] != "")
-            while(false)
-            {
-                if(strpos($_SESSION["cart"], 'item1') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item1/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[0]++;
-                }
-                else if(strpos($_SESSION["cart"], 'item2') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item2/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[1]++;
-                }
-                else if(strpos($_SESSION["cart"], 'item3') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item3/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[2]++;
-                }
-                else if(strpos($_SESSION["cart"], 'item4') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item4/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[3]++;
-                }
-                else if(strpos($_SESSION["cart"], 'item5') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item5/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[4]++;
-                }
-                else if(strpos($_SESSION["cart"], 'item6') !== false)
-                {
-                    $_SESSION["cart"] = preg_replace('/item6/', '', $_SESSION["cart"], 1);
-                    $ItemsArray[5]++;
-                }
-            }
-        }
-        
-        if($ItemsArray[0] != 0)
-        {
-            echo "Energy Sword: $3   - " . $ItemsArray[0] . " <br />";
-        }
-        if($ItemsArray[1] != 0)
-        {
-            echo "Spartan Helmet: $5   - " . $ItemsArray[1] . " <br />";
-        }
-        if($ItemsArray[2] != 0)
-        {
-            echo "Plamsa Pistol: $3   - " . $ItemsArray[2] . " <br />";
-        }
-        if($ItemsArray[3] != 0)
-        {
-            echo "Plasma Rifle: $3   - " . $ItemsArray[3] . " <br />";
-        }
-        if($ItemsArray[4] != 0)
-        {
-            echo "Cortana AI Chip: $4.50   - " . $ItemsArray[4] . " <br />";
-        }
-        if($ItemsArray[5] != 0)
-        {
-            echo "Master Chief and Cortana: $3   - " . $ItemsArray[5] . " <br />";
-        }
-        
-        echo "</h3>";
-        
-        $_SESSION["cart"] = $CartBackup;
-        $ItemsArray = array(0,0,0,0,0,0);
-        
+
         ?>
         </div>
         <div class="panel-footer">
