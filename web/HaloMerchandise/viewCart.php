@@ -88,7 +88,9 @@ session_start();
         else
         {
             echo "<h3>";
-            while($_SESSION["cart"] != "")
+            print_r ($_SESSION["cart"]);
+            #while($_SESSION["cart"] != "")
+            while(false)
             {
                 if(strpos($_SESSION["cart"], 'item1') !== false)
                 {

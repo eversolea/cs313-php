@@ -36,6 +36,7 @@ require('dbConnect.php')
 </head>
 <body>
 <?php
+#Function to replace last instance of string
 function str_lreplace($search, $replace, $subject)
 {
     $pos = strrpos($subject, $search);
@@ -48,6 +49,7 @@ function str_lreplace($search, $replace, $subject)
     return $subject;
 }
 
+#Function to only initialize $cart array once
 if(!isset($_SESSION['first_run'])){
     $_SESSION['first_run'] = 1;
     $cart = [];
@@ -61,6 +63,7 @@ foreach ($_GET as $param_name => $param_val)     {
     $cart[] = $param_name;
     
 }
+$_SESSION['cart'] = $cart;
 
 if(isset($_GET['Item1']))
 {
