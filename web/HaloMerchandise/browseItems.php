@@ -50,17 +50,20 @@ function str_lreplace($search, $replace, $subject)
 }
 
 #Function to only initialize $cart array once
+$cart = [];
+
 if(!isset($_SESSION['first_run'])){
     $_SESSION['first_run'] = 1;
     $cart = [];
 }
+$cart = $_SESSION['cart'];
 
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
     $newitem = str_lreplace("_",".",$param_name);
     $newitem = str_replace('_', '&nbsp;', $newitem);
     echo "$newitem";
-    $cart[] = $param_name;
+    $cart[] = $newitem;
     
 }
 $_SESSION['cart'] = $cart;
