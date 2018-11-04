@@ -44,8 +44,8 @@ if(!isset($_SESSION['first_run'])){
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
     $newitem  = str_replace('_', '', $param_name);
-    echo "$newitem  $cart";
-    $cart[] = $newItem;
+    echo "$cart";
+    $cart[] = $param_name;
     
 }
 
@@ -129,7 +129,7 @@ if(isset($_GET['Item6']))
         <div class='panel-footer'>";
     echo $row['price'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -164,7 +164,7 @@ if(isset($_GET['Item6']))
     echo "<br /> Synopsis:";
     echo $row['synopsis'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -197,7 +197,7 @@ if(isset($_GET['Item6']))
     echo "<br /> For Kids?:";
     echo $row['forkids'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -228,7 +228,7 @@ if(isset($_GET['Item6']))
     echo "<br /> Toy Size:";
     echo $row['isize'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
