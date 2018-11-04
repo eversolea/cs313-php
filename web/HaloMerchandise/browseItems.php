@@ -38,7 +38,7 @@ require('dbConnect.php')
 <?php
 if(!isset($_SESSION['first_run'])){
     $_SESSION['first_run'] = 1;
-    $cart = []
+    $cart = [];
 }
 
 foreach ($_GET as $param_name => $param_val)     {
