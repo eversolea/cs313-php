@@ -88,7 +88,9 @@ session_start();
         else
         {
             echo "<h3>";
-            print_r ($_SESSION["cart"]);
+            foreach($_SESSION["cart"] as $result) {
+                echo $result[], '<br>';
+            }
             #while($_SESSION["cart"] != "")
             while(false)
             {
