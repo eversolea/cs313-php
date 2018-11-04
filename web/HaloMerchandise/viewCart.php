@@ -89,7 +89,7 @@ session_start();
         {
             echo "<h3>";
             foreach($_SESSION["cart"] as $result) {
-                echo $result[], '<br>';
+                echo $result, '<br>';
             }
             #while($_SESSION["cart"] != "")
             while(false)
