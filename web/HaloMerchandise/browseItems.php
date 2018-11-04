@@ -36,6 +36,11 @@ require('dbConnect.php')
 </head>
 <body>
 <?php
+
+foreach ($_POST as $param_name => $param_val) {
+    echo "Param: $param_name; Value: $param_val<br />\n";
+}
+
 if(isset($_GET['Item1']))
 {
     $_SESSION['cart'] = $_SESSION['cart'] . 'item1';
@@ -116,7 +121,7 @@ if(isset($_GET['Item6']))
         <div class='panel-footer'>";
     echo $row['price'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -151,7 +156,7 @@ if(isset($_GET['Item6']))
     echo "<br /> Synopsis:";
     echo $row['synopsis'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -184,7 +189,7 @@ if(isset($_GET['Item6']))
     echo "<br /> For Kids?:";
     echo $row['forkids'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
@@ -215,7 +220,7 @@ if(isset($_GET['Item6']))
     echo "<br /> Toy Size:";
     echo $row['isize'];
     echo "<form action='browseItems.php' method='get'>
-        <input type='submit' name='Item1' class='btn btn-danger' value='Add to Cart'/>       
+        <input type='submit' name='" . $row['name'] . " $" . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
     #I'll need to fix this php code to work with dynamically generated items now
