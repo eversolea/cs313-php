@@ -55,7 +55,7 @@ if(!isset($_SESSION['first_run'])){
 
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
-    $newitem = str_lreplace("_",".",$param_name)
+    $newitem = str_lreplace("_",".",$param_name);
     $newitem = str_replace('_', '&nbsp;', $newitem);
     echo "$newitem";
     $cart[] = $param_name;
