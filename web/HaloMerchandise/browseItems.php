@@ -36,11 +36,16 @@ require('dbConnect.php')
 </head>
 <body>
 <?php
+if(!isset($_SESSION['first_run'])){
+    $_SESSION['first_run'] = 1;
+    $cart = []
+}
 
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
-    $cart .= preg_replace('_', ' ', $param_name, -1);
-    echo "$cart";
+    $newitem = preg_replace('_', ' ', $param_name, -1);
+    echo "$newitem  $cart";
+    $cart[] = $newItem;
     
 }
 
