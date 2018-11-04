@@ -37,8 +37,11 @@ require('dbConnect.php')
 <body>
 <?php
 
-foreach ($_GET as $param_name => $param_val) {
-    echo "Param: $param_name; Value: $param_val<br />\n";
+foreach ($_GET as $param_name => $param_val)     {
+    #Param: Halo_3_$$21_57; Value: Add to Cart
+    $cart .= preg_replace('_', ' ', $param_name, -1)
+    echo "$cart"
+    
 }
 
 if(isset($_GET['Item1']))
