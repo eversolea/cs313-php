@@ -153,7 +153,8 @@ if(isset($_GET['Item6']))
         
     $searchQuery = $row['name'] . " " . $row['price'];
     $compare1 = str_replace(' ', '', $searchQuery);
-    $compare2 = str_replace(' ', '', $_SESSION["cart"][0]);
+    $dbString = $_SESSION["cart"][count($_SESSION["cart"])]
+    $compare2 = str_replace(' ', '', $dbString);
     echo "$compare1" . "/" . "$compare2";
     if($compare1 == $compare2)
     {
