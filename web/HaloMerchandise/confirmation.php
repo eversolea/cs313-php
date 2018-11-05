@@ -96,7 +96,7 @@ session_start();
         ?>
         <br />
         Your shipping information:
-        <br />
+        <br />  
         <?php
         if(isset($_POST["address1"]))
         {

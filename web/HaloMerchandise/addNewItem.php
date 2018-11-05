@@ -84,7 +84,7 @@ $db = get_db();
             <input type="hidden" name="itemType" value="0" />
             Name: <input type="text" name="name" value=""><br />
             Price: <input type="text" name="price" value=""><br />
-            Item Size (0,1,2): <input type="text" name="size" value=""><br />
+            Item Size (0,1,2,3): <input type="text" name="size" value=""><br />
             Webpage URL: <input type="text" name="website" value=""><br />
             Thumbnail Image URL: <input type="text" name="image" value=""><br />
             <input type="submit">
@@ -108,8 +108,8 @@ $db = get_db();
             <input type="hidden" name="itemType" value="2" />
             Name: <input type='text' name='name' value=''><br />
             Price: <input type='text' name='price' value=''><br />
-            Item Size (0,1,2): <input type='text' name='size' value=''><br />
-            For Kids? (True,False): <input type='text' name='kids' value=''><br />
+            Toy Size (0,1,2,3): <input type='text' name='size' value=''><br />
+            For Kids? (0,1): <input type='text' name='kids' value=''><br />
             Webpage URL: <input type='text' name='website' value=''><br />
             Thumbnail Image URL: <input type='text' name='image' value=''><br />
             <input type='submit'>
@@ -120,7 +120,7 @@ $db = get_db();
             <input type="hidden" name="itemType" value="3" />
             Name: <input type='text' name='name' value=''><br />
             Price: <input type='text' name='price' value=''><br />
-            Item Size (0,1,2): <input type='text' name='size' value=''><br />
+            Item Size (0,1,2,3): <input type='text' name='size' value=''><br />
             Webpage URL: <input type='text' name='website' value=''><br />
             Thumbnail Image URL: <input type='text' name='image' value=''><br />
             <input type='submit'>
@@ -176,7 +176,6 @@ $db = get_db();
          </form>
         
         <div class="panel-footer">
-        <a class="btn btn-primary" href="checkout.php">Check Out</a>
         <br /><br />
         
         <br /><br />

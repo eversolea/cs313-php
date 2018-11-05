@@ -49,49 +49,40 @@ function str_lreplace($search, $replace, $subject)
     return $subject;
 }
 
-#Function to only initialize $cart array once
-$cart = [];
 
-if(!isset($_SESSION['first_run'])){
-    $_SESSION['first_run'] = 1;
-    $cart = [];
-}
+#store Session var CART as one we can use easily in this PHP page
 $cart = $_SESSION['cart'];
 
+#populate our local cart variable with any additional items
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
     $newitem = str_lreplace("_",".",$param_name);
     $newitem = str_replace('_', '&nbsp;', $newitem);
-    echo "$newitem";
     $cart[] = $newitem;
     
 }
+#Add any additional itesm back to the Session Var CART
 $_SESSION['cart'] = $cart;
 
-if(isset($_GET['Item1']))
+#Function to return ToySize as a string
+function toySize($size)
 {
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item1';
+    if($size==0){ return "Very Small"; }
+    if($size==1){ return "Small"; }
+    if($size==2){ return "Medium"; }
+    if($size==3){ return "Large"; }
+    else { return "Unknown";}
 }
-if(isset($_GET['Item2']))
+
+#Function to return For Kids as a string
+function forKids($kids)
 {
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item2';
+    if($kids==0) { return "No"; }
+    else {
+        return "Yes";
+    }
 }
-if(isset($_GET['Item3']))
-{
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item3';
-}
-if(isset($_GET['Item4']))
-{
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item4';
-}
-if(isset($_GET['Item5']))
-{
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item5';
-}
-if(isset($_GET['Item6']))
-{
-    $_SESSION['cart'] = $_SESSION['cart'] . 'item6';
-}
+
 ?>  
 
 <div class='jumbotron'>
@@ -163,7 +154,6 @@ if(isset($_GET['Item6']))
         echo "<div class='alert alert-success'>Item Bought!</div>";
         }
     }
-    #I'll need to fix this php code to work with dynamically generated items now
     
     echo "
         </div>
@@ -235,9 +225,9 @@ if(isset($_GET['Item6']))
         <div class='panel-footer'>";
     echo $row['price'];
     echo "<br /> Toy Size:";
-    echo $row['isize'];
+    echo toySize($row['isize']);
     echo "<br /> For Kids?:";
-    echo $row['forkids'];
+    echo forKids($row['forkids']);
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
@@ -279,7 +269,7 @@ if(isset($_GET['Item6']))
         <div class='panel-footer'>";
     echo $row['price'];
     echo "<br /> Toy Size:";
-    echo $row['isize'];
+    echo toySize($row['isize']);
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
