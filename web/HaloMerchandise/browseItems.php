@@ -61,7 +61,6 @@ $cart = $_SESSION['cart'];
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
     $newitem = str_lreplace("_",".",$param_name);
-    $newitem = str_replace('_', '&nbsp;', $newitem);
     echo "$newitem";
     $cart[] = $newitem;
     
@@ -156,8 +155,6 @@ if(isset($_GET['Item6']))
 
     foreach($_SESSION["cart"] as $result) {
         
-        $compare2 = str_replace('&nbsp;', '', $result);
-        echo "/" . $compare1 . "/" . $compare2 . "/";
         if($compare1 == $compare2)
         {
         echo "<div class='alert alert-success'>Item Bought!</div>";
