@@ -171,6 +171,9 @@ if(isset($_GET['Item6']))
     </div>";
     }
     
+    
+    
+    
     $stmt = $db->prepare('SELECT * FROM games');
     $result = $stmt->execute();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC))
@@ -212,6 +215,10 @@ if(isset($_GET['Item6']))
       </div>
     </div>";
     }
+    
+    
+    
+    
     $stmt = $db->prepare('SELECT * FROM toys');
     $result = $stmt->execute();
     
@@ -235,11 +242,27 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
+    $searchQuery = $row['name'] . " " . $row['price'];
+    $compare1 = str_replace(' ', '', $searchQuery);
+    
+    foreach($_SESSION["cart"] as $result) {
+        
+        $compare2 = str_replace('&nbsp;', '', $result);
+        echo "/" . $compare1 . "/" . $compare2 . "/";
+        if($compare1 == $compare2)
+        {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+    }
+    
     echo "
         </div>
       </div>
     </div>";
     }
+    
+    
+    
     
     $stmt = $db->prepare('SELECT * FROM other');
     $result = $stmt->execute();
@@ -260,7 +283,20 @@ if(isset($_GET['Item6']))
     echo "<form action='browseItems.php' method='get'>
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
+    
+    $searchQuery = $row['name'] . " " . $row['price'];
+    $compare1 = str_replace(' ', '', $searchQuery);
+    
+    foreach($_SESSION["cart"] as $result) {
         
+        $compare2 = str_replace('&nbsp;', '', $result);
+        echo "/" . $compare1 . "/" . $compare2 . "/";
+        if($compare1 == $compare2)
+        {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+    }
+    
     echo "
         </div>
       </div>
