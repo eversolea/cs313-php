@@ -155,6 +155,7 @@ if(isset($_GET['Item6']))
 
     foreach($_SESSION["cart"] as $result) {
         
+        echo "$compare1" . "$compare2";
         if($compare1 == $compare2)
         {
         echo "<div class='alert alert-success'>Item Bought!</div>";
