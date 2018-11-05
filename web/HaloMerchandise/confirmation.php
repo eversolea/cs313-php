@@ -100,7 +100,7 @@ session_start();
         <?php
         if(isset($_POST["address1"]))
         {
-            echo "Street Address:" . $_POST["address1"];
+            echo "Street Address: " . $_POST["address1"];
         }
         else
         {
@@ -118,7 +118,7 @@ session_start();
         echo "<br />";
         if(isset($_POST["city"]))
         {
-            echo "City:" . $_POST["city"];
+            echo "City: " . $_POST["city"];
         }
         else
         {
@@ -127,7 +127,7 @@ session_start();
         echo "<br />";
         if(isset($_POST["zip"]))
         {
-            echo "Postal / Zip Code:" . $_POST["zip"];
+            echo "Postal / Zip Code: " . $_POST["zip"];
         }
         else
         {
@@ -136,7 +136,7 @@ session_start();
         echo "<br />";
         if(isset($_POST["state"]))
         {
-            echo "State / Province / Region:" . $_POST["state"];
+            echo "State / Province / Region: " . $_POST["state"];
         }
         else
         {
@@ -145,7 +145,7 @@ session_start();
         echo "<br />";
         if(isset($_POST["country"]))
         {
-             echo "Country" . $_POST["country"];
+             echo "Country: " . $_POST["country"];
         }
         else
         {
