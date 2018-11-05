@@ -92,7 +92,7 @@ session_start();
             foreach($_SESSION["cart"] as $result) {
                 echo $result, '<br>';
             }
-
+        }
         ?>
         <br />
         Your shipping information:
