@@ -153,9 +153,8 @@ if(isset($_GET['Item6']))
         
     $searchQuery = $row['name'] . " " . $row['price'];
     foreach($_SESSION["cart"] as $result) {
-        echo "/" . $searchQuery . "/" . $result . "/";
-        echo $searchQuery == $result;
-        echo $searchQuery === $result;
+        echo "/" . $searchQuery . "/" . $_SESSION["cart"][0] . "/";
+ 
         if($searchQuery == $result)
         {
         echo "<div class='alert alert-success'>Item Bought!</div>";
@@ -193,11 +192,7 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
-    #I'll need to fix this php code to work with dynamically generated items now
-    if(strpos($_SESSION['cart'], 'item1') !== false)
-    {
-        echo "<div class='alert alert-success'>Item Bought!</div>";
-    }
+
     echo "
         </div>
       </div>
@@ -226,11 +221,6 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
-    #I'll need to fix this php code to work with dynamically generated items now
-    if(strpos($_SESSION['cart'], 'item1') !== false)
-    {
-        echo "<div class='alert alert-success'>Item Bought!</div>";
-    }
     echo "
         </div>
       </div>
@@ -257,11 +247,6 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
-    #I'll need to fix this php code to work with dynamically generated items now
-    if(strpos($_SESSION['cart'], 'item1') !== false)
-    {
-        echo "<div class='alert alert-success'>Item Bought!</div>";
-    }
     echo "
         </div>
       </div>
