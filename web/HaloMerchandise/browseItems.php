@@ -154,6 +154,8 @@ if(isset($_GET['Item6']))
     $searchQuery = $row['name'] . " " . $row['price'];
     foreach($_SESSION["cart"] as $result) {
         echo "/" . $searchQuery . "/" . $result . "/";
+        echo $searchQuery == $result;
+        echo $searchQuery === $result;
         if($searchQuery == $result)
         {
         echo "<div class='alert alert-success'>Item Bought!</div>";
