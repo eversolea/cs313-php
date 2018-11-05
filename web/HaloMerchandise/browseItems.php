@@ -156,7 +156,7 @@ if(isset($_GET['Item6']))
 
     foreach($_SESSION["cart"] as $result) {
         
-        $compare2 = str_replace(' ', '', $result);
+        $compare2 = str_replace('&nbsp;', '', $result);
         echo "/" . $compare1 . "/" . $compare2 . "/";
         if($compare1 == $compare2)
         {
