@@ -151,12 +151,15 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
-    #I'll need to fix this php code to work with dynamically generated items now
     $searchQuery = $row['name'] . " " . $row['price'];
-    $cart = $_SESSION['cart'];
-    if(in_array($searchQuery,$cart)){
+    foreach($_SESSION["cart"] as $result) {
+        if($searchQuery == $result)
+        {
         echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
     }
+    #I'll need to fix this php code to work with dynamically generated items now
+    
     echo "
         </div>
       </div>
