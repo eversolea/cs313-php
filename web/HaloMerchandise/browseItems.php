@@ -61,6 +61,7 @@ $cart = $_SESSION['cart'];
 foreach ($_GET as $param_name => $param_val)     {
     #Param: Halo_3_$$21_57; Value: Add to Cart
     $newitem = str_lreplace("_",".",$param_name);
+    $newitem = str_replace('_', '&nbsp;', $newitem);
     echo "$newitem";
     $cart[] = $newitem;
     
@@ -155,7 +156,8 @@ if(isset($_GET['Item6']))
 
     foreach($_SESSION["cart"] as $result) {
         
-        echo "$compare1" . "$compare2";
+        $compare2 = str_replace('&nbsp;', '', $result);
+        echo "/" . $compare1 . "/" . $compare2 . "/";
         if($compare1 == $compare2)
         {
         echo "<div class='alert alert-success'>Item Bought!</div>";
@@ -193,7 +195,18 @@ if(isset($_GET['Item6']))
         <input type='submit' name='" . $row['name'] . " " . $row['price'] . "' class='btn btn-danger' value='Add to Cart'/>       
         </form>";
         
-
+    $searchQuery = $row['name'] . " " . $row['price'];
+    $compare1 = str_replace(' ', '', $searchQuery);
+    
+    foreach($_SESSION["cart"] as $result) {
+        
+        $compare2 = str_replace('&nbsp;', '', $result);
+        echo "/" . $compare1 . "/" . $compare2 . "/";
+        if($compare1 == $compare2)
+        {
+        echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
+    }
     echo "
         </div>
       </div>
