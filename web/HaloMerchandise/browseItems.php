@@ -153,12 +153,15 @@ if(isset($_GET['Item6']))
         
     $searchQuery = $row['name'] . " " . $row['price'];
     $compare1 = str_replace(' ', '', $searchQuery);
-    $dbString = $_SESSION["cart"][count($_SESSION["cart"])];
-    $compare2 = str_replace(' ', '', $dbString);
-    echo "$compare1" . "/" . "$compare2";
-    if($compare1 == $compare2)
-    {
+
+    foreach($_SESSION["cart"] as $result) {
+        
+        $compare2 = str_replace(' ', '', $result);
+        echo "/" . $compare1 . "/" . $compare2 . "/";
+        if($compare1 == $compare2)
+        {
         echo "<div class='alert alert-success'>Item Bought!</div>";
+        }
     }
     #I'll need to fix this php code to work with dynamically generated items now
     
