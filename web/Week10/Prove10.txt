@@ -1,0 +1,38 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://radiant-refuge-28824.herokuapp.com/form.html
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+Index.js, Form.html, and Result.ejs are the main parts of this project that I used. Very cool stuff!
+
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+Everything is working!
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I like how you can control the flow of webpages! For example, we got the GET from the form.html, and processed it using our javascript then sent it to the result page over in the pages folder! Very cool stuff.
+
+6. In your own words, briefly describe the concept of a callback function and why it is useful.
+
+A callback function is usefull because you can do so much more with page flow, and with the 2 request and response variables you can access all sorts of varaibles and do many things with it.
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+E
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I read the subnotes on the UPS page that said that if weight is greater than 3.5, then it should be considered a Large Envelope (for Letters Stamped or Letters Metered). So I implemented this in my index.js letter Handeler logic.
