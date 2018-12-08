@@ -17,6 +17,6 @@ function loadMainScreen() {
       document.getElementById("mainView").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "mainScreen.html", true);
+  xhttp.open("GET", "MainScreen.html", true);
   xhttp.send();
 }
