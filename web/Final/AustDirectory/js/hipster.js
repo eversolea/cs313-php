@@ -20,3 +20,4 @@ function loadMainScreen() {
   xhttp.open("GET", "MainScreen.html", true);
   xhttp.send();
 }
+

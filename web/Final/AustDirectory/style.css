@@ -13,3 +13,5 @@
     --------------------------------------- */
     .h-100{height:100%!important;}
     .i-am-centered { margin: auto; max-width: 300px;}
+    .essence-btn:hover, .essence-btn:focus {
+    background-color: #007bff;}
