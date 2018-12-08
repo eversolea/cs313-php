@@ -1,0 +1,41 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Project Title / One sentence description:
+
+The Hipster House:
+An online store! My girlfriend and her mom are actually 
+thinking of making a store and want a website. So I am making a website for them.
+
+2. Copy and paste the URL for your web application (if applicable):
+
+https://enigmatic-bastion-35195.herokuapp.com/Final/AustDirectory/index.html
+
+3. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/eversolea/cs313-php/tree/master/web/Final/AustDirectory
+
+4. Describe the functionality that is currently working, along with any special instructions of how to use your web application:
+
+Currently the static User interface design is working. Also the AJAX call is working well.
+
+
+5. Describe the features that are not yet working correctly.
+
+Locally the drop down menu on the navbar works great and shows a very nice looking drop-down menu. But this doesnt work when I push it to heroku. Still investigating.
+
+6. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+E
+
+7. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I worked really hard on getting the User Interface to look as professional as possible. This is because I want to set the framework for an actual website that will be used for my girlfriends family's store. I found a free Bootstrap design that gave off good vibes and a professional feel that I liked, and then I spent hours editing it to a more simplistic version that I could add my own custom code to (AJAX, next week Node.JS and Express, etc.).
+
+8. Please list any questions you have for the instructor regarding this assignment or this week's topic.
+
+I'm sorry i am submitting this so late! The project change but a wrench in things but I am catching up now.
